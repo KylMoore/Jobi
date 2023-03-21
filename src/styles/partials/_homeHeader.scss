@@ -1,0 +1,112 @@
+@use "./variables" as *;
+
+header {
+    background-color: $primary;
+    position: relative;
+    padding: 2rem 0;
+    height: 65vh;
+    
+    h1 {
+        margin: 0;
+        font-size: 3rem;
+        width: 45%;
+    }
+
+    .firstH1 {
+        color: $fontSecondary;
+        z-index: 10;
+    }
+
+    .secondH1 {
+        color: $quaternary;
+        z-index: 10;
+    }
+
+    .womanLaptop {
+        position: absolute;
+        height: 30rem;
+        right: 4rem;
+        top: 2rem;
+        z-index: 2;
+        background: $primary;
+        background-position: 5rem;
+        
+    }
+
+    .smallLines {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2.5rem;
+    }
+
+    .bigLines {
+        position: absolute;
+        top: 0.5rem;
+        right: 5rem;
+        height: 30rem;
+        z-index: 1;
+    }
+
+    .formContainer {
+        p {
+            font-size: .75rem;
+        }
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+        padding-left: 2rem;
+        background-color: $tertiary;
+        z-index: 10;
+        height: 4rem;
+        border-radius: 0.5rem;
+        width: 75%;
+
+        .searchWhatAreYouLookingFor {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
+
+        .searchCategory {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            width: 30%;
+        }
+
+        label {
+            font-size: 0.75rem;
+            color: $quinary;
+        }
+
+        input {
+            border: none;
+            font-family: $mon;
+            background-color: $tertiary;
+        }
+
+        select {
+            color: $fontPrimary;
+            font-family: $mon;
+            background-color: $tertiary;
+            border: none;
+        }
+
+        button {
+            height: 100%;
+            border: none;
+            width: 23%;
+            border-radius: 0 0.5rem 0.5rem 0;
+            background-color: $quaternary;
+        }
+    }
+
+    p {
+        color: $fontSecondary;
+    }
+}

@@ -1,4 +1,4 @@
-import Header from "./homePage/Header";
+import HomeHeader from "./homePage/HomeHeader";
 import GetTalentedExpertsInJobi from "./homePage/GetTalentedExpertsInJobi";
 import HowItWorks from "./homePage/HowItWorks";
 import MostDemandingCategories from "./homePage/MostDemandingCategories";
@@ -12,7 +12,7 @@ import MustCompleteJobPortal from "./homePage/MustCompleteJobPortal";
 const HomePage = () => {
   return (
     <div>
-      <Header />
+      <HomeHeader />
       <MostDemandingCategories />
       <GetTalentedExpertsInJobi />
       <HowItWorks />

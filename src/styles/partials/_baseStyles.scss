@@ -1,0 +1,57 @@
+@use "./variables" as *;
+
+html {
+    background-color: #f5f5f5;
+    font-size: 125%;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+h1 {
+    font-family: $eb;
+    font-size: 90px;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+}
+
+h2 {
+    font-family: $eb;
+    font-size: 85px;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+}
+h3 {
+    font-family: $eb;
+    font-size: 72px;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+}
+
+h4 {
+    font-family: $eb;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+}
+
+h5 {
+    font-family: $eb;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+}
+
+h6 {
+    font-family: $eb;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+}
+
+body {
+    font-family: $mon;
+    line-height: 1.2;
+    letter-spacing: 1.2;
+}
+

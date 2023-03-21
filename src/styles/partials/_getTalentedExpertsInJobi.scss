@@ -1,0 +1,61 @@
+@use "./variables" as *;
+
+.talentedExperts {
+    background-color: #ffffff;
+}
+
+.talentedExpertsContainer {
+    padding: 10rem 0;
+    display: flex;
+    justify-content: space-between;
+
+    .talentedExpertsImageContainer {
+        width: 42.5%;
+
+        img {
+            height: 30rem;
+        }
+    }
+
+    .talentedExpertsContentContainer {
+        width: 42.5%;
+
+        h2 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        p {
+            margin: 2rem 0 0 0;
+            font-family: $eb;
+        }
+
+        ul {
+            padding: 1rem;
+            margin: 0;
+
+            li{
+                font-family: $eb;
+                padding: .5rem 0;
+                font-weight: 600;
+                list-style: circle;
+            }
+        }
+
+        button {
+            background-color: $quaternary;
+            border: none;
+            width: 8rem;
+            padding: .5rem;
+            border-radius: 5rem;
+            transition: 0.5s;
+        
+            &:hover,
+            &:focus {
+                background-color: $secondary;
+                color: $fontSecondary;
+            }
+        }
+    }
+}
+

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav className="nav">
       <ul>
         <li>
           <img src="./assets/jobiLogoLight.png" alt="Jobi Logo" />
@@ -15,33 +15,53 @@ const NavBar = () => {
       </ul>
       <ul>
         <li>
-          <Link
-            to="/"
-            aria-label="Navigate to jobi home page"
-            title="Home"
-            onClick={() => {}}
-          ></Link>
-          <a href="#">Home</a>
+          <Link to="/" aria-label="Navigate to jobi home page" title="Home">
+            Home
+          </Link>
         </li>
         <li>
           <Link
             to="/jobListings"
             aria-label="Navigate to job listings"
             title="Job Listings"
-          ></Link>
+          >
+            Job
+          </Link>
         </li>
         <li>
-          <a href="#">Explore</a>
+          <Link
+            to="/explore"
+            aria-label="Navigate to explore page"
+            title="Explore"
+          >
+            Explore
+          </Link>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Link
+            to="/contact"
+            aria-label="Navigate to Contact page"
+            title="Contact Us"
+          >
+            Contact
+          </Link>
         </li>
         <li>
-          <a href="#">Pages</a>
+          <button>Pages</button>
+
+          {/* <Link to="/pages" aria-label="Navigate to Pages page" title="Pages">
+            Pages
+          </Link> */}
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <img src="../assets/Shape.svg" alt="" />
         </li>
       </ul>
       <ul>
         <li>Post Job</li>
+        <img className="line" src="../assets/line.svg" alt="" />
         <li>Login</li>
         <li>
           <button>Hire Top Talents</button>

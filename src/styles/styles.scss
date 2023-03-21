@@ -1,4 +1,9 @@
-@use "./partials/setup";
-@use "./partials/normalize";
-@use "./partials/baseStyles";
-@use "./partials/variables"
+@use "./partials/variables" as *;
+@use "./partials/baseStyles" as *;
+@use "./partials/setup" as *;
+@use "./partials/normalize" as *;
+@use "./partials/navbar" as *;
+@use "./partials/homeHeader" as *;
+@use "./partials/mostDemandingCategories" as *;
+@use "./partials/getTalentedExpertsInJobi" as *;
+@use "./partials/howItWorks" as *;

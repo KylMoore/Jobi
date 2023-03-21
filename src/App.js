@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 import "./styles/styles.scss";
 import ErrorPage from "./Components/ErrorPage";
 import JobListings from "./Components/JobListings";
+import ContactPage from "./Components/ContactPage";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/jobListings" element={<JobListings />} />
+        {/* <Route path="/explore" element={</>}/> */}
+        <Route path="/contact" element={<ContactPage />}></Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
