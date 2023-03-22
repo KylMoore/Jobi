@@ -3,6 +3,7 @@
 .mostDemandingCategories {
     padding: 5rem;
     background-color: $senary;
+    position: relative;
 }
 
 .mostDemandingCategoriesHeader {
@@ -93,5 +94,11 @@
                 }
             }
         }
+    }
+
+    .smallLines {
+        position: absolute;
+        right: 0;
+        bottom: 0;
     }
 }

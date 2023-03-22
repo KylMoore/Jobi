@@ -1,0 +1,124 @@
+@use "./variables" as *;
+
+.trustedByLeadingStartups {
+
+    .wrapper {
+        border-bottom: 1px solid $quinary;
+    }
+}
+
+.trustedByLeadingStartupsHeader {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+
+    h2 {
+        font-size: 3rem;
+        color: $primary;
+        margin: 0;
+        width: 60%;
+    }
+
+    .trustedByLeadingStartupsButtons {
+        display: flex;
+        align-items: flex-end;
+
+        button {
+            background-color: $fontSecondary;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            height: 2rem;
+            width: 2rem;
+            border: none;
+            border-radius: 5rem;
+            transition: .5s;
+
+            &:hover,
+            &:focus {
+                background-color: $quaternary;
+            }
+
+            svg {
+                fill: $primary;
+                height: 0.5rem;
+            }
+        }
+    }
+}
+
+.trustedByLeadingStartupsList {
+    
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+
+        li {
+            list-style: none;
+            border: 1px solid $fontPrimary;
+            background-color: $senary;
+            border-radius: 1rem;
+            width: 49%;
+            transition: .5s;
+            padding: 1rem;
+
+            &:hover, &:focus {
+                background-color: $quaternary;
+            }
+
+            h3 {
+                font-size: 2rem;
+                margin: 0;
+            }
+
+            h6 {
+                font-weight: 400;
+                margin: 2rem 0 1rem 0;
+            }
+
+            p {
+                font-weight: 600;
+            }
+
+            .companyHeading {
+                display: flex;
+            }
+
+            .lineBreak {
+                width: 100%;
+            }
+
+            .starRanking {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                align-content: center;
+            }
+        }
+    }
+}
+
+.logoList {
+    margin: 4rem 0 2rem 0;
+
+    ul {
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        li {
+            list-style: none;
+
+            img {
+                height: 1.5rem;
+            }
+        }
+    }
+}

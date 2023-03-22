@@ -76,6 +76,7 @@ const mostDemandingCategories = () => {
             </li>
           </Link>
         </ul>
+        <img className="smallLines" src="../assets/BgShapeGreen.svg" alt="" />
       </div>
     </section>
   );

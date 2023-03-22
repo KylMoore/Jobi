@@ -2,26 +2,71 @@
 
 .howItWorks {
     background-color: $primary;
+    padding: 2rem 0;
+    position: relative;
 
-    h2 {
-        color: $fontSecondary;
+    .howItWorksHeader{
+        position: relative;
+
+        h2 {
+            color: $fontSecondary;
+            text-align: center;
+            position: relative;
+            margin: 0;
+            
+            .threeLines {
+                position: absolute;
+                top: -2rem;
+                right: 8rem;
+            }
+        }
+
     }
 
     .howItWorksContent {
         display: flex;
         flex-direction: row;
 
-        li {                
-            display: flex;
-            flex-direction: column;
-            list-style: none;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
+        h4 {
+            font-weight: 600;
+            font-family: $eb;
         }
-        
-        .arrowRight {
-            height: 1rem;
+
+        p {
+            font-weight: 600;
+            font-size: 0.75rem;
+            color: $secondary;
+        }
+
+        ul {
+            padding: 0;
+            display: flex;
+            
+            li {                
+                list-style: none;
+                text-align: center;
+                color: $fontSecondary;
+            }
+            
+            .arrowRight {
+                height: 1rem;
+                align-self: center;
+            }
         }
     }
+
+    .smallBgShape {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .squiggle {
+        position: absolute;
+        height: 3rem;
+        width: 3rem;
+        bottom: 1rem;
+        right: 1rem;
+    }
+
 }

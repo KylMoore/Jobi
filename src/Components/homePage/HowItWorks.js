@@ -4,9 +4,18 @@ const HowItWorks = () => {
   return (
     <section className="howItWorks">
       <div className="wrapper">
-        <h2>How's it work?</h2>
-        <ul>
-          <div className="howItWorksContent">
+        <div className="howItWorksHeader">
+          <h2>
+            How's it work?
+            <img
+              className="threeLines"
+              src="../assets/threeLinesGreen.svg"
+              alt=""
+            />
+          </h2>
+        </div>
+        <div className="howItWorksContent">
+          <ul>
             <li>
               <img src="./assets/personIcon.svg" alt="person icon" />
               <h4>Create Account</h4>
@@ -30,9 +39,11 @@ const HowItWorks = () => {
                 get it
               </p>
             </li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </div>
+      <img className="smallBgShape" src="./assets/smallBgShape.svg" alt="" />
+      <img className="squiggle" src="../assets/Shape.svg" alt="" />
     </section>
   );
 };
