@@ -1,0 +1,76 @@
+@use "./variables" as *;
+
+.jobiGuidesSection {
+    background-color: #ffffff;
+    padding: 1rem;
+    
+    .jobiGuidesHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        h2 {
+            font-size: 3rem;
+            margin: 1rem 0;
+            color: $primary;
+        }
+    
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $quaternary;
+            border: none;
+            color: $primary;
+            height: 2rem;
+            width: 8rem;
+            padding: .5rem;
+            border-radius: 5rem;
+            transition: 0.5s;
+        
+            &:hover,
+            &:focus {
+                background-color: $secondary;
+                color: $fontSecondary;
+            }
+        }
+    }
+
+    .jobiGuidesList {
+        
+        ul {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                width: 30%;
+
+                img {
+                    height: 10rem;
+                }
+
+                h5 {
+                    font-family: $mon;
+                    color: $quinary;
+                    font-weight: 400;
+                }
+
+                h4 {
+                    margin: 0;
+                    font-family: $mon;
+                }
+
+                h6 {
+                    font-family: $mon;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+
