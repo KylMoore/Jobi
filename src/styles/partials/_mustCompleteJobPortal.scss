@@ -1,1 +1,70 @@
 @use "./variables" as *;
+
+
+.mustCompleteJobPortalSection {
+    background-color: #ffffff;
+    padding: 2rem 0;
+    
+    .wrapper {
+        border-bottom: 1px solid $quinary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+        
+        .mustCompleteJobPortalHeader {
+            width: 65%;
+    
+            h2 {
+                font-size: 2rem;
+                margin: 0;
+            }
+    
+            p {
+                font-size: 0.75rem;
+                color: $quinary;
+            }
+        }
+    
+        .mustCompleteJobPortalButtons {
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            
+            .mustCompleteJobPortalButton1 {
+                width: 60%;
+                font-size: 0.75rem;
+                padding: 0 0.75rem;
+                background-color: #ffffff;
+                border: 2px solid $primary;
+                color: $primary;
+                border-radius: 0.25rem;
+                transition: 0.5s;
+                font-weight: 600;
+
+                &:hover,
+                &:focus {
+                    background-color: $quaternary;
+                }
+            }
+
+            .mustCompleteJobPortalButton2 {
+                width: 35%;
+                font-size: 0.75rem;
+                padding: .75rem;
+                background-color: $quaternary;
+                border: none;
+                border-radius: 0.25rem;
+                color: $primary;
+                transition: 0.5s;
+                font-weight: 600;
+                
+                &:hover,            
+                &:focus {
+                    background-color: $primary;
+                    color: $fontSecondary;
+                }
+            }
+        }
+    }
+}

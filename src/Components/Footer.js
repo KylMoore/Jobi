@@ -1,14 +1,15 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer>
-      <div>
+      <div className="footerLists wrapper">
+        <img className="footerSquare" src="./assets/footerSquare.svg" alt="" />
         <ul>
           <li>
-            <img src="" alt="" />
+            <img src="./assets/jobiLogoDark.svg" alt="" />
           </li>
           <li>
             <h3>Products</h3>
@@ -43,7 +44,7 @@ const Footer = () => {
             <h3>Newsletter</h3>
             <ul>
               <li>
-                <p>Join & get important news regularly</p>
+                <strong>Join & get important news regularly</strong>
               </li>
               <li>
                 <form>
@@ -58,14 +59,14 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="footerBottom wrapper">
         <ul>
           <li>
             <p>Privacy & Terms</p>
             <p>Contact Us</p>
           </li>
           <li>
-            <p>Copyright @2023 jobi inc.</p>
+            <span>Copyright @2023 jobi inc.</span>
           </li>
           <li>
             <ul>
