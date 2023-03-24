@@ -13,4 +13,6 @@
 @use "./partials/jobiGuides" as *;
 @use "./partials/matchedJob" as *;
 @use "./partials/mustCompleteJobPortal" as *;
-@use "./partials/footer" as *
+@use "./partials/footer" as *;
+@use "./partials/errorPage" as *;
+@use "./partials/jobListingHeader" as *;
