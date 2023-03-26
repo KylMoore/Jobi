@@ -12,7 +12,15 @@ const jobListingJobs = () => {
             <ul>
               <li>
                 <h4>
-                  Location <img src="" alt="" />
+                  Location{" "}
+                  <button className="minusButton">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path d="M416 256c0 17.7-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                  </button>
                 </h4>
 
                 <select>
@@ -21,7 +29,15 @@ const jobListingJobs = () => {
               </li>
               <li>
                 <h4>
-                  Job Type <img src="" alt="" />
+                  Job Type{" "}
+                  <button className="minusButton">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path d="M416 256c0 17.7-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                  </button>
                 </h4>
                 <div className="jobTypeChecklist">
                   <div className="jobTypeChecklistFlex">
@@ -59,7 +75,15 @@ const jobListingJobs = () => {
               </li>
               <li>
                 <h4>
-                  Experience <img src="" alt="" />
+                  Experience{" "}
+                  <button className="minusButton">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path d="M416 256c0 17.7-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                  </button>
                 </h4>
                 <div className="jobTypeChecklist">
                   <div className="jobTypeChecklistFlex">
@@ -105,13 +129,29 @@ const jobListingJobs = () => {
               </li>
               <li>
                 <h4>
-                  Salary <img src="" alt="" />
+                  Salary{" "}
+                  <button className="minusButton">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path d="M416 256c0 17.7-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                  </button>
                 </h4>
                 <div>Slider</div>
               </li>
               <li>
                 <h4>
-                  Category <img src="" alt="" />
+                  Category{" "}
+                  <button className="minusButton">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path d="M416 256c0 17.7-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                  </button>
                 </h4>
                 <div className="jobTypeCategory">
                   <div className="jobTypeChecklistFlex">
@@ -147,7 +187,15 @@ const jobListingJobs = () => {
               </li>
               <li>
                 <h4>
-                  Tags <img src="" alt="" />
+                  Tags{" "}
+                  <button className="minusButton">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path d="M416 256c0 17.7-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                  </button>
                 </h4>
                 <div className="jobTypeCategory">
                   <div className="jobTypeChecklistFlex">
@@ -189,16 +237,25 @@ const jobListingJobs = () => {
         </div>
         <div className="jobListingJobsList">
           <div className="jobListingJobsListFilter">
-            <label htmlFor="datePosted">Date Posted:</label>
-            <select name="datePosted">
-              <option>Latest</option>
-              <option>Past Week</option>
-              <option>Past Month</option>
-              <option>Past Year</option>
-            </select>
-            <button>
-              <img src="" alt="" />
-            </button>
+            <div className="jobListingJobsListFilterLeft">
+              <p>
+                All <span>1000</span> jobs found
+              </p>
+            </div>
+            <div className="jobListingJobsListFilterRight">
+              <label htmlFor="datePosted">Date Posted:</label>
+              <select name="datePosted">
+                <option>Latest</option>
+                <option>Past Week</option>
+                <option>Past Month</option>
+                <option>Past Year</option>
+              </select>
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                </svg>
+              </button>
+            </div>
           </div>
           <div className="jobListingJobsListJobs">
             <ul>
