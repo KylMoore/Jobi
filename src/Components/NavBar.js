@@ -60,9 +60,13 @@ const NavBar = () => {
         </li>
       </ul>
       <ul>
-        <li>Post Job</li>
+        <li>
+          <button className="postJobButton">Post Job</button>
+        </li>
         <img className="line" src="../assets/line.svg" alt="" />
-        <li>Login</li>
+        <li>
+          <button className="loginButton">Login</button>
+        </li>
         <li>
           <button>Hire Top Talents</button>
         </li>
