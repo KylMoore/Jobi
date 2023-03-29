@@ -1,11 +1,38 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
+
 import React from "react";
 
-import { Link } from "react-router-dom";
+const Login = ({ closeLogin }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-const Login = () => {
+  const login = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCrendentials) => {
+        console.log(userCrendentials);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
-    <div className="login">
-      <div className="loginForm">
+    <div
+      onClick={() => {
+        closeLogin(false);
+      }}
+      className="login"
+    >
+      <div
+        className="loginForm"
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <div className="wrapper">
           <div className="loginHeader">
             <h2>Hi, Welcome Back!</h2>
@@ -22,8 +49,13 @@ const Login = () => {
           </div>
           <form>
             <div className="signUpFormPadding">
-              <label htmlFor="name" required>
-                Name*
+              <label
+                htmlFor="name"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              >
+                Email*
               </label>
               <input type="text" name="name" />
             </div>
@@ -31,22 +63,27 @@ const Login = () => {
               <label htmlFor="password" required>
                 Password*
               </label>
-              <input type="text" name="password" />
+              <input
+                type="text"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                name="password"
+              />
             </div>
             <div className="keepLoggedIn">
               <div>
                 <input type="checkbox" name="keepLoggedIn" />
                 <label htmlFor="keepLoggedIn">Keep me logged in</label>
               </div>
-              <a href="">Forget password?</a>
+              <p>Forget password?</p>
             </div>
-            <button className="loginButton" type="submit">
+            <button className="loginButton" onSubmit={login} type="submit">
               Login
             </button>
             <div className="signUpLines">
-              <img src="./assets/horizontalLine.svg" alt />
+              <img src="./assets/horizontalLine.svg" alt="" />
               <p>Or</p>
-              <img src="./assets/horizontalLine.svg" alt />
+              <img src="./assets/horizontalLine.svg" alt="" />
             </div>
 
             <div className="signUpButtons">

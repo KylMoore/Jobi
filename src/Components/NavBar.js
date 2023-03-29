@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+import Login from "./Login";
+import PageOptionsModal from "./PageOptionsModal";
 
 const NavBar = () => {
+  const [openLogin, setOpenLogin] = useState(false);
+  const [openPages, setOpenPages] = useState(false);
+
+  const handleClick = () => {
+    setOpenPages(!openPages);
+  };
+
   return (
     <nav className="nav">
       <ul>
@@ -47,11 +58,15 @@ const NavBar = () => {
           </Link>
         </li>
         <li>
-          <button>Pages</button>
-
-          {/* <Link to="/pages" aria-label="Navigate to Pages page" title="Pages">
+          <button
+            className="pagesButton"
+            onClick={() => {
+              handleClick();
+            }}
+          >
             Pages
-          </Link> */}
+            {openPages ? <PageOptionsModal /> : null}
+          </button>
         </li>
       </ul>
       <ul>
@@ -65,7 +80,15 @@ const NavBar = () => {
         </li>
         <img className="line" src="../assets/line.svg" alt="" />
         <li>
-          <button className="loginButton">Login</button>
+          <button
+            className="loginButton"
+            onClick={() => {
+              setOpenLogin(true);
+            }}
+          >
+            Login
+          </button>
+          {openLogin && <Login closeLogin={setOpenLogin} />}
         </li>
         <li>
           <button>Hire Top Talents</button>

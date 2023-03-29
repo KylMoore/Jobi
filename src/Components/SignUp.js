@@ -1,11 +1,25 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { auth } from "../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
 import React from "react";
-import { initializeApp } from "@firebase/app";
-import { useRef } from "react";
 
 const SignUp = () => {
-  const emailRef = useRef();
-  const nameRef = useRef();
-  const passwordRef = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signUp = (e) => {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, name, email, password)
+      .then((userCrendentials) => {
+        console.log(userCrendentials);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <section className="signUpSection">
@@ -37,41 +51,70 @@ const SignUp = () => {
               <label htmlFor="employer">Employer</label>
             </fieldset>
           </form>
-          <form className="signUpForm2">
+          <form onSubmit={signUp} className="signUpForm2">
             <div className="signUpForm2Padding">
-              <label htmlFor="name" ref={nameRef} required>
+              <label htmlFor="name" required>
                 Name*
               </label>
-              <input type="text" name="name"></input>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                name="name"
+              ></input>
             </div>
             <div className="signUpForm2Padding">
-              <label htmlFor="email" ref={emailRef} required>
+              <label htmlFor="email" required>
                 Email*
               </label>
-              <input type="email" name="email"></input>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                name="email"
+              ></input>
             </div>
             <div className="signUpForm2Padding">
-              <label htmlFor="password" ref={passwordRef} required>
+              <label htmlFor="password" required>
                 Password*
               </label>
-              <input type="password" name="password"></input>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                name="password"
+              ></input>
             </div>
 
             <div className="registerTermAgreement">
-              <input type="checkbox" name="agreeToTerms"></input>
+              <input type="checkbox" name="agreeToTerms" required></input>
               <label htmlFor="keepLoggedIn">
                 By Hitting the "Register" button, you agree to the{" "}
-                <a href="">Terms Conditions</a> & <a href="">Privacy Policy</a>
+                <Link
+                  to="/termsAndConditions"
+                  aria-label="Navigate to terms and conditions page"
+                  title="Terms And Conditions"
+                >
+                  Terms Conditions
+                </Link>{" "}
+                &{" "}
+                <Link
+                  to="/privacyPolicy"
+                  aria-label="Navigate to privacy policy page"
+                  title="Privacy Policy"
+                >
+                  Privacy Policy
+                </Link>
               </label>
             </div>
             <button className="loginButton" type="submit">
-              Login
+              Sign up
             </button>
 
             <div className="signUpLines">
-              <img src="./assets/horizontalLine.svg" alt />
+              <img src="./assets/horizontalLine.svg" alt="" />
               <p>Or</p>
-              <img src="./assets/horizontalLine.svg" alt />
+              <img src="./assets/horizontalLine.svg" alt="" />
             </div>
 
             <div className="signUpButtons">
@@ -86,7 +129,14 @@ const SignUp = () => {
               </button>
             </div>
             <p>
-              Have an account? <a href="#">Sign in</a>
+              Have an account?{" "}
+              <Link
+                to="/signUp"
+                aria-label="Navigate to sign up page"
+                title="Sign Up"
+              >
+                Sign in
+              </Link>
             </p>
           </form>
         </div>

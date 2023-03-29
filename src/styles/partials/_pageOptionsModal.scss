@@ -1,0 +1,37 @@
+@use "./variables" as *;
+
+.pageOptionsModal {
+    // display: none;
+    width: max-content;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    background-color: #ffffff;
+    z-index: 100;
+    border-radius: .5rem;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: .75rem 1.5rem 0.75rem .5rem;
+
+        li {
+            padding: 0.25rem;
+            
+            a{
+                text-decoration: none;
+                color: $primary;
+                border: none;
+                font-size: .75rem;
+
+                &:hover, &:focus {
+                    color: $primary;
+                    border: none;
+                }
+            }
+        }
+    }
+}

@@ -515,9 +515,12 @@ nav ul li a {
   color: #f5f5f5;
   text-decoration: none;
   transition: 0.5s;
+  display: flex;
+  border-bottom: 2px solid #254135;
 }
 nav ul li a:hover, nav ul li a:focus {
   color: #d2f34c;
+  border-bottom: 2px solid #d2f34c;
 }
 nav ul li button {
   background-color: #d2f34c;
@@ -529,6 +532,34 @@ nav ul li button {
 nav ul li button:hover, nav ul li button:focus {
   background-color: #31795a;
   color: #f5f5f5;
+}
+nav ul li .pagesButton {
+  background-color: #254135;
+  color: #f5f5f5;
+  position: relative;
+}
+nav ul li .pagesButton:hover, nav ul li .pagesButton:focus {
+  background-color: #254135;
+}
+nav ul li .postJobButton {
+  background-color: #254135;
+  color: #f5f5f5;
+  border-bottom: 2px solid #254135;
+}
+nav ul li .postJobButton:hover, nav ul li .postJobButton:focus {
+  color: #d2f34c;
+  background-color: #254135;
+}
+nav ul li .loginButton {
+  background-color: #254135;
+  color: #d2f34c;
+  border-bottom: 2px solid #254135;
+  border-radius: 0;
+}
+nav ul li .loginButton:hover, nav ul li .loginButton:focus {
+  color: #d2f34c;
+  background-color: #254135;
+  border-bottom: 2px solid #d2f34c;
 }
 
 header {
@@ -1863,8 +1894,15 @@ footer .footerBottom ul li ul li svg {
 }
 
 .login {
+  position: fixed;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .login .loginForm {
   display: flex;
@@ -1984,4 +2022,37 @@ footer .footerBottom ul li ul li svg {
 .login .signUpButtons button img {
   height: 1rem;
   width: 1rem;
+}
+
+.pageOptionsModal {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  background-color: #ffffff;
+  z-index: 100;
+  border-radius: 0.5rem;
+}
+.pageOptionsModal ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.75rem 1.5rem 0.75rem 0.5rem;
+}
+.pageOptionsModal ul li {
+  padding: 0.25rem;
+}
+.pageOptionsModal ul li a {
+  text-decoration: none;
+  color: #254135;
+  border: none;
+  font-size: 0.75rem;
+}
+.pageOptionsModal ul li a:hover, .pageOptionsModal ul li a:focus {
+  color: #254135;
+  border: none;
 }/*# sourceMappingURL=styles.css.map */

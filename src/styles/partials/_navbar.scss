@@ -33,9 +33,12 @@ nav {
                 color: $fontSecondary;
                 text-decoration: none;
                 transition: 0.5s;
+                display: flex;
+                border-bottom: 2px solid $primary;
 
                 &:hover, &:focus {
                     color: $quaternary;
+                    border-bottom: 2px solid $quaternary;
                 }
             }
 
@@ -52,6 +55,42 @@ nav {
                 }
             }
 
+            .pagesButton {
+                background-color: $primary;
+                color: $fontSecondary;
+                position: relative;
+                
+                &:hover,
+                &:focus {
+                    background-color: $primary;
+                }
+            }
+
+            .postJobButton {
+                background-color: $primary;
+                color: $fontSecondary;
+                border-bottom: 2px solid $primary;
+                
+                &:hover,
+                &:focus {
+                    color: $quaternary;
+                    background-color: $primary;
+                }
+            }
+
+            .loginButton {
+                background-color: $primary;
+                color: $quaternary;
+                border-bottom: 2px solid $primary;
+                border-radius: 0;
+                
+                &:hover,
+                &:focus {
+                    color: $quaternary;
+                    background-color: $primary;
+                    border-bottom: 2px solid $quaternary;
+                }
+            }
         }
     }
 }
