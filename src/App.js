@@ -18,6 +18,7 @@ import PrivacyPolicy from "./Components/PrivacyPolicy";
 import AboutUs from "./Components/AboutUs";
 import PricingPage from "./Components/PricingPage";
 import BlogPage from "./Components/BlogPage";
+import MustCompleteJobPortal from "./Components/homePage/MustCompleteJobPortal";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <MustCompleteJobPortal />
       <Footer />
     </div>
   );
