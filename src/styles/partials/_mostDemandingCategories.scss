@@ -70,9 +70,11 @@
                 list-style: none;
                 background-color: $fontSecondary;
                 height: 10rem;
-                width: 8rem;
+                width: fit-content;
+                min-width: 6rem;
                 border-radius: 2rem;
                 transition: .5s;
+                padding: 0 .5rem;
                 
                 &:hover, &:focus {
                     background-color: $quaternary;

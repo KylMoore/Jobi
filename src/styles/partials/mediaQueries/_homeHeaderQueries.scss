@@ -1,0 +1,206 @@
+@use "../variables" as *;
+
+@media (max-width: 1100px) {
+    .firstH1 {
+        font-size: 2.5rem;
+    }
+    .secondH1 {
+        font-size: 2.5rem;
+    }
+
+    header {
+        .firstHeaderP {
+            font-size: 0.75rem;
+            width: 40%;
+        }
+
+        .womanLaptop {
+            height: 25rem;
+        }
+        .bigLines {
+            height: 25rem;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+
+    header {
+    
+        form {
+            height: 3rem;
+        }    
+        .womanLaptop {
+            height: 20rem;
+            top: 4rem;
+        }
+        
+        .bigLines {
+            height: 20rem;
+            top: 2.5rem;
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    header {
+        form{
+
+            label {
+                font-size: 0.5rem;
+            }
+
+            select {
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        
+        form {
+            width: 100%;
+        }
+        .womanLaptop {
+            height: 15rem;
+            top: 4rem;
+        }
+        
+        .bigLines {
+            height: 15rem;
+            top: 2.5rem;
+        }
+    }
+}
+
+@media (max-width: 655px) {
+    header {
+        height: 55vh;
+
+        .firstH1 {
+            font-size: 2rem;
+        }
+
+        .secondH1 {
+            font-size: 2rem;
+        }
+
+        .formContainer {
+
+            .secondHeaderP {
+                font-size: .5rem;
+            }
+        }
+
+        form {
+            height: 2.5rem;
+        }
+        
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        form {
+            height: 2.5rem;
+        }
+
+        .womanLaptop {
+            height: 10rem;
+            top: 4rem;
+        }
+        
+        .bigLines {
+            height: 10rem;
+            top: 2.5rem;
+        }
+    }
+    
+}
+
+@media (max-width: 530px) {
+    header {
+        height: 45vh;
+        h1 {
+            width: 100%;
+        }
+
+        .firstHeaderP {
+            width: 100%;
+        }
+
+        .womanLaptop {
+            display: none;
+        }
+        .bigLines {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        padding-top: 1rem;
+        height: fit-content;
+
+        .formContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            form {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                align-self: center;
+                height: fit-content;
+                width: fit-content;
+                padding: 0;
+
+                .searchWhatAreYouLookingFor {
+                    width: 90%;
+                    
+                    label {
+                        width: 100%;
+                        text-align: center;
+                        padding: .5rem;
+                    }
+                    input {
+                        background-color: $senary;
+                    }
+                }
+
+                .searchCategory {
+                    width: 90%;
+                    
+                    label {
+                        width: 100%;
+                        text-align: center;
+                        padding: .5rem;
+                    }
+                    
+                    select {
+                        background-color: $senary;
+                        text-align: center;
+                    }
+                }
+
+                img {
+                    display: none;
+                }
+            }
+
+            button{
+                font-size: .75rem;
+                width: fit-content;
+                padding: 0.25rem .5rem;
+                margin: .75rem;
+                border-radius: .25rem;
+            }
+        }
+    }
+}

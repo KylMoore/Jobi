@@ -36,8 +36,8 @@ const Login = ({ closeLogin }) => {
         <div className="wrapper">
           <div className="loginHeader">
             <h2>Hi, Welcome Back!</h2>
-            <p>
-              Still don't have an account?{" "}
+            <p className="loginP">
+              Still don't have an account?
               <Link
                 to="/signUp"
                 aria-label="Navigate to sign up page"
@@ -80,6 +80,7 @@ const Login = ({ closeLogin }) => {
             <button className="loginButton" onSubmit={login} type="submit">
               Login
             </button>
+
             <div className="signUpLines">
               <img src="./assets/horizontalLine.svg" alt="" />
               <p>Or</p>
@@ -97,7 +98,7 @@ const Login = ({ closeLogin }) => {
                 Login with Facebook
               </button>
             </div>
-            <p>
+            <p className="loginP2">
               Don't have an account?{" "}
               <Link
                 to="/signUp"

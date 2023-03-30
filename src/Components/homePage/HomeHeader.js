@@ -6,7 +6,9 @@ const HomeHeader = () => {
       <div className="wrapper">
         <h1 className="firstH1">Find & Hire</h1>
         <h1 className="secondH1">Top 3% of experts on jobi</h1>
-        <p>We deliver blazing fast & striking work solutions</p>
+        <p className="firstHeaderP">
+          We deliver blazing fast & striking work solutions
+        </p>
         <div className="formContainer">
           <form>
             <div className="searchWhatAreYouLookingFor">
@@ -30,7 +32,7 @@ const HomeHeader = () => {
             </div>
             <button>Search</button>
           </form>
-          <p>
+          <p className="secondHeaderP">
             <strong>Popular:</strong> Design, Art, Video Editing
           </p>
         </div>

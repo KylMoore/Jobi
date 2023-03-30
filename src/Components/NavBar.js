@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Login from "./Login";
 import PageOptionsModal from "./PageOptionsModal";
+import { auth } from "../firebase";
 
 const NavBar = () => {
   const [openLogin, setOpenLogin] = useState(false);
   const [openPages, setOpenPages] = useState(false);
+  // const [currentUser, setCurrentUser] = useState("");
+
+  // useEffect(() => {
+  //   auth.onAuthStateChanged((user) => {
+  //     setCurrentUser(currentUser);
+  //   });
+  // }, []);
 
   const handleClick = () => {
     setOpenPages(!openPages);
@@ -14,17 +22,26 @@ const NavBar = () => {
 
   return (
     <nav className="nav">
-      <ul>
+      <div className="hamburgerMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+        </svg>
+      </div>
+      <ul className="navFirstImagesContainer">
         <li>
-          <img src="./assets/jobiLogoLight.png" alt="Jobi Logo" />
+          <img
+            className="jobiLogoLight"
+            src="./assets/jobiLogoLight.png"
+            alt="Jobi Logo"
+          />
         </li>
         <li>
-          <a href="#">
+          <a className="categoryButton" href="home">
             <img src="./assets/category.svg" alt="category button" />
           </a>
         </li>
       </ul>
-      <ul>
+      <ul className="navAnchors">
         <li>
           <Link to="/" aria-label="Navigate to jobi home page" title="Home">
             Home
@@ -69,12 +86,12 @@ const NavBar = () => {
           </button>
         </li>
       </ul>
-      <ul>
+      <ul className="navSecondImagesContainer">
         <li>
-          <img src="../assets/Shape.svg" alt="" />
+          <img className="navSquiggle" src="../assets/Shape.svg" alt="" />
         </li>
       </ul>
-      <ul>
+      <ul className="navLoginButtons">
         <li>
           <button className="postJobButton">Post Job</button>
         </li>
@@ -89,6 +106,7 @@ const NavBar = () => {
             Login
           </button>
           {openLogin && <Login closeLogin={setOpenLogin} />}
+          {/* {currentUser && <p>{currentUser.email}</p>} */}
         </li>
         <li>
           <button>Hire Top Talents</button>

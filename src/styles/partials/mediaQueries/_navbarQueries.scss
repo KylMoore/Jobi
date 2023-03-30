@@ -1,0 +1,176 @@
+@use "../variables" as *;
+
+@media (max-width: 1250px) {
+    nav {
+
+        img {
+            height: 2rem;
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    nav {
+
+        a {
+            font-size: 0.75rem;
+        }
+        button {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    nav {
+
+        .categoryButton {
+            
+            img {
+                height: 1.25rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 970px) {
+    nav {
+        .jobiLogoLight {
+            display: none;
+        }
+        .categoryButton {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    nav {
+
+        .navSquiggle {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .navFirstImagesContainer {
+        display: none;
+    }
+    .navSecondImagesContainer {
+        display: none;
+    }
+}
+
+@media (max-width: 670px) {
+    nav {
+
+        ul{
+
+            li{
+                padding: 0 0.25rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 590px) {
+    nav {
+        justify-content: flex-end;
+        padding-right: 1rem;
+
+        .hamburgerMenu {
+            display: flex;
+            position: fixed;
+            justify-content: center;
+            align-content: center;
+            top: 1rem;
+            background-color: $fontPrimary;
+            left: 2rem;
+            height: 1.5rem;
+            width: 1.5rem;
+            padding: .25rem;
+            border-radius: .25rem;
+            z-index: 1000;
+            
+            svg {
+                fill: $quaternary;
+            }
+        }
+
+        .navFirstImagesContainer {
+            display: flex;
+
+            .jobiLogoLight {
+                display: flex;
+                position: absolute;
+                
+                width: 4rem;
+                height: 1.5rem;
+                top: 1rem;
+                left: 5rem;
+            }
+        }
+
+        .navAnchors {
+            display: none;
+        }
+
+        ul{
+
+            li{
+                padding: 0;
+
+                button{
+                    padding: 0.25rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    nav {
+        .hamburgerMenu {
+            left: 1rem;
+        }
+
+        .navFirstImagesContainer {
+
+            .jobiLogoLight {
+                left: 3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    nav {
+        padding: .25rem;
+
+        .hamburgerMenu {
+            top: 2rem;
+        }
+        
+        .navFirstImagesContainer {
+            
+            .jobiLogoLight {
+                top: 2rem;
+                left: 5rem;
+            }
+        }
+
+        .navLoginButtons {
+            flex-direction: column-reverse;
+            
+            .line {
+                display: none;
+            }
+                
+            .loginButton {
+                padding-top: .75rem;
+            }
+            
+        }
+    }
+}

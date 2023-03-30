@@ -6,7 +6,7 @@ html {
 .wrapper {
   width: 90%;
   margin: 0 auto;
-  max-width: 1080px;
+  max-width: 2080px;
 }
 
 nav a {
@@ -493,6 +493,9 @@ nav {
   justify-content: space-evenly;
   align-content: center;
 }
+nav .hamburgerMenu {
+  display: none;
+}
 nav ul {
   display: flex;
   margin: 0;
@@ -510,6 +513,17 @@ nav ul li {
   justify-content: space-between;
   align-items: center;
   list-style: none;
+}
+nav ul li img {
+  border: none;
+}
+nav ul li .categoryButton {
+  border: none;
+}
+nav ul li .categoryButton:hover, nav ul li .categoryButton:focus {
+  border: none;
+  background-color: #0f1620;
+  border-radius: 5rem;
 }
 nav ul li a {
   color: #f5f5f5;
@@ -530,7 +544,7 @@ nav ul li button {
   transition: 0.5s;
 }
 nav ul li button:hover, nav ul li button:focus {
-  background-color: #31795a;
+  background-color: #0f1620;
   color: #f5f5f5;
 }
 nav ul li .pagesButton {
@@ -716,9 +730,12 @@ header p {
   list-style: none;
   background-color: #f5f5f5;
   height: 10rem;
-  width: 8rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 6rem;
   border-radius: 2rem;
   transition: 0.5s;
+  padding: 0 0.5rem;
 }
 .demandingCategories ul a li:hover, .demandingCategories ul a li:focus {
   background-color: #d2f34c;
@@ -1938,6 +1955,19 @@ footer .footerBottom ul li ul li svg {
   justify-content: center;
   align-items: center;
 }
+.login .loginForm .loginHeader h2 {
+  font-size: 2rem;
+}
+.login .loginForm .loginHeader .loginP {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login .loginForm .loginHeader .loginP a {
+  font-size: 0.75rem;
+  border: none;
+  margin-left: 0.5rem;
+}
 .login .loginForm form {
   display: flex;
   flex-direction: column;
@@ -1958,6 +1988,18 @@ footer .footerBottom ul li ul li svg {
   color: #c4c4c4;
   font-size: 0.5rem;
   padding: 0.25rem 0;
+}
+.login .loginForm form .loginP2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c4c4c4;
+}
+.login .loginForm form .loginP2 a {
+  font-size: 0.75rem;
+  border: none;
+  margin-left: 0.5rem;
+  border-bottom: 1px solid #31795a;
 }
 .login .keepLoggedIn {
   display: flex;
@@ -1993,6 +2035,7 @@ footer .footerBottom ul li ul li svg {
 .login .loginButton:hover, .login .loginButton:focus {
   background-color: #e9f2ef;
   color: #31795a;
+  border: 1px solid #31795a;
 }
 .login .signUpLines {
   display: flex;
@@ -2055,4 +2098,338 @@ footer .footerBottom ul li ul li svg {
 .pageOptionsModal ul li a:hover, .pageOptionsModal ul li a:focus {
   color: #254135;
   border: none;
+}
+
+@media (max-width: 1250px) {
+  nav img {
+    height: 2rem;
+  }
+}
+@media (max-width: 1180px) {
+  nav a {
+    font-size: 0.75rem;
+  }
+  nav button {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 1025px) {
+  nav .categoryButton img {
+    height: 1.25rem;
+  }
+}
+@media (max-width: 970px) {
+  nav .jobiLogoLight {
+    display: none;
+  }
+  nav .categoryButton {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  nav .navSquiggle {
+    display: none;
+  }
+}
+@media (max-width: 730px) {
+  .navFirstImagesContainer {
+    display: none;
+  }
+  .navSecondImagesContainer {
+    display: none;
+  }
+}
+@media (max-width: 670px) {
+  nav ul li {
+    padding: 0 0.25rem;
+  }
+}
+@media (max-width: 590px) {
+  nav {
+    justify-content: flex-end;
+    padding-right: 1rem;
+  }
+  nav .hamburgerMenu {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-content: center;
+    top: 1rem;
+    background-color: #0f1620;
+    left: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    z-index: 1000;
+  }
+  nav .hamburgerMenu svg {
+    fill: #d2f34c;
+  }
+  nav .navFirstImagesContainer {
+    display: flex;
+  }
+  nav .navFirstImagesContainer .jobiLogoLight {
+    display: flex;
+    position: absolute;
+    width: 4rem;
+    height: 1.5rem;
+    top: 1rem;
+    left: 5rem;
+  }
+  nav .navAnchors {
+    display: none;
+  }
+  nav ul li {
+    padding: 0;
+  }
+  nav ul li button {
+    padding: 0.25rem;
+  }
+}
+@media (max-width: 450px) {
+  nav .hamburgerMenu {
+    left: 1rem;
+  }
+  nav .navFirstImagesContainer .jobiLogoLight {
+    left: 3rem;
+  }
+}
+@media (max-width: 400px) {
+  nav {
+    padding: 0.25rem;
+  }
+  nav .hamburgerMenu {
+    top: 2rem;
+  }
+  nav .navFirstImagesContainer .jobiLogoLight {
+    top: 2rem;
+    left: 5rem;
+  }
+  nav .navLoginButtons {
+    flex-direction: column-reverse;
+  }
+  nav .navLoginButtons .line {
+    display: none;
+  }
+  nav .navLoginButtons .loginButton {
+    padding-top: 0.75rem;
+  }
+}
+@media (max-width: 1100px) {
+  .firstH1 {
+    font-size: 2.5rem;
+  }
+  .secondH1 {
+    font-size: 2.5rem;
+  }
+  header .firstHeaderP {
+    font-size: 0.75rem;
+    width: 40%;
+  }
+  header .womanLaptop {
+    height: 25rem;
+  }
+  header .bigLines {
+    height: 25rem;
+  }
+}
+@media (max-width: 860px) {
+  header form {
+    height: 3rem;
+  }
+  header .womanLaptop {
+    height: 20rem;
+    top: 4rem;
+  }
+  header .bigLines {
+    height: 20rem;
+    top: 2.5rem;
+  }
+}
+@media (max-width: 780px) {
+  header form label {
+    font-size: 0.5rem;
+  }
+  header form select {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 700px) {
+  header form {
+    width: 100%;
+  }
+  header .womanLaptop {
+    height: 15rem;
+    top: 4rem;
+  }
+  header .bigLines {
+    height: 15rem;
+    top: 2.5rem;
+  }
+}
+@media (max-width: 655px) {
+  header {
+    height: 55vh;
+  }
+  header .firstH1 {
+    font-size: 2rem;
+  }
+  header .secondH1 {
+    font-size: 2rem;
+  }
+  header .formContainer .secondHeaderP {
+    font-size: 0.5rem;
+  }
+  header form {
+    height: 2.5rem;
+  }
+}
+@media (max-width: 600px) {
+  header form {
+    height: 2.5rem;
+  }
+  header .womanLaptop {
+    height: 10rem;
+    top: 4rem;
+  }
+  header .bigLines {
+    height: 10rem;
+    top: 2.5rem;
+  }
+}
+@media (max-width: 530px) {
+  header {
+    height: 45vh;
+  }
+  header h1 {
+    width: 100%;
+  }
+  header .firstHeaderP {
+    width: 100%;
+  }
+  header .womanLaptop {
+    display: none;
+  }
+  header .bigLines {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    padding-top: 1rem;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  header .formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .formContainer form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0;
+  }
+  header .formContainer form .searchWhatAreYouLookingFor {
+    width: 90%;
+  }
+  header .formContainer form .searchWhatAreYouLookingFor label {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  header .formContainer form .searchWhatAreYouLookingFor input {
+    background-color: #f2f9d8;
+  }
+  header .formContainer form .searchCategory {
+    width: 90%;
+  }
+  header .formContainer form .searchCategory label {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  header .formContainer form .searchCategory select {
+    background-color: #f2f9d8;
+    text-align: center;
+  }
+  header .formContainer form img {
+    display: none;
+  }
+  header .formContainer button {
+    font-size: 0.75rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.25rem 0.5rem;
+    margin: 0.75rem;
+    border-radius: 0.25rem;
+  }
+}
+@media (max-width: 1020px) {
+  .mostDemandingCategories .demandingCategories ul {
+    flex-wrap: wrap;
+  }
+  .mostDemandingCategories .demandingCategories ul li {
+    height: 8rem;
+    margin: 0.5rem;
+  }
+  .mostDemandingCategories .demandingCategories ul li h4 {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 750px) {
+  .mostDemandingCategories {
+    padding: 2rem 1.5rem;
+  }
+  .mostDemandingCategories .mostDemandingCategoriesHeader {
+    flex-direction: column;
+  }
+  .mostDemandingCategories .mostDemandingCategoriesHeader .headerContainer {
+    width: 100%;
+  }
+  .mostDemandingCategories .mostDemandingCategoriesHeader .pContainer {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .mostDemandingCategoriesHeader {
+    padding-bottom: 0.25rem;
+  }
+  .mostDemandingCategoriesHeader .pContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  .mostDemandingCategoriesHeader .pContainer p {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  .mostDemandingCategoriesHeader .pContainer a {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .mostDemandingCategoriesHeader .headerContainer h2 {
+    text-align: center;
+  }
+  .mostDemandingCategoriesHeader .headerContainer .threeLines {
+    right: -1rem;
+    top: -2rem;
+    height: 2.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .mostDemandingCategories .demandingCategories ul li h4 {
+    font-size: 0.55rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

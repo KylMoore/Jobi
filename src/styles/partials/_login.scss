@@ -48,6 +48,22 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .loginP {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a {
+                    font-size: 0.75rem;
+                    border: none;
+                    margin-left: 0.5rem;
+                }
+            }
         }
 
         form {
@@ -71,6 +87,20 @@
                     color: $quinary;
                     font-size: 0.5rem;
                     padding: .25rem 0;
+                }
+            }
+            
+            .loginP2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $quinary;
+
+                a {
+                    font-size: 0.75rem;
+                    border: none;
+                    margin-left: .5rem;
+                    border-bottom: 1px solid $secondary;
                 }
             }
         }
@@ -115,6 +145,7 @@
     &:focus {
         background-color: $tertiary;
         color: $secondary;
+        border: 1px solid $secondary;
     }
 }
 

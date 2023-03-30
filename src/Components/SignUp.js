@@ -12,12 +12,15 @@ const SignUp = () => {
 
   const signUp = (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, name, email, password)
-      .then((userCrendentials) => {
-        console.log(userCrendentials);
+    // const auth = getAuth();
+    // console.log(auth, name, email, password);
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCrendential) => {
+        console.log(userCrendential);
       })
       .catch((error) => {
-        console.log(error);
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
       });
   };
 

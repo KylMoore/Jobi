@@ -1,7 +1,7 @@
 import React from "react";
 
 const GetInTouch = () => {
-  return <div>GetInTouch</div>;
+  return <div></div>;
 };
 
 export default GetInTouch;
