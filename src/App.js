@@ -19,6 +19,7 @@ import AboutUs from "./Components/AboutUs";
 import PricingPage from "./Components/PricingPage";
 import BlogPage from "./Components/BlogPage";
 import MustCompleteJobPortal from "./Components/homePage/MustCompleteJobPortal";
+import JobDescription from "./Components/JobDescription";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/jobListings" element={<JobListings />} />
+        <Route path="/jobDescription" element={<JobDescription />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/contact" element={<ContactPage />}></Route>
         <Route

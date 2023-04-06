@@ -1,0 +1,49 @@
+@use "./variables" as *;
+
+.relatedJobsSection {
+    padding: 3rem 0;
+    background-color: $tertiary;
+
+    .relatedJobsHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-size: 2rem;
+            font-family: $mon;
+            margin: 0;
+        }
+    }
+
+    .relatedJobsListing {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 30%;
+        padding: 1.5rem;
+
+        img {
+            height: 1rem;
+        }
+
+        .relatedJobsListingInfo {
+
+            h3 {
+                background-color: $tertiary;
+                color: $secondary;
+                padding: .25rem 1rem;
+                font-size: 0.75rem;
+                width: fit-content;
+            }
+
+            h2 {
+                font-size: 1rem;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

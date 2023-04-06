@@ -1,12 +1,22 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 const JobListingJobsInfo = () => {
   return (
     <section className="jobListingJobsInfoSection">
       <img src="" alt="Company Logo" />
       <div className="jobListingJobsInfoSectionLeftContent">
         <h3>Job Type</h3>
-        <h2>Job Title.</h2>
+        <h2>
+          <Link
+            to="/jobDescription"
+            aria-label="Navigate to job description page"
+            title="Job Description"
+          >
+            Job Title.
+          </Link>
+        </h2>
       </div>
       <div className="jobListingJobsInfoSectionMiddleContent">
         <p>Location</p>

@@ -46,6 +46,11 @@
                 &:focus {
                     background-color: $quaternary;
                 }
+
+                a {
+                    text-decoration: none;
+                    color: $primary;
+                }
             }
 
             .mustCompleteJobPortalButton2 {

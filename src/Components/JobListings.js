@@ -9,7 +9,6 @@ const JobListings = () => {
     <div>
       <JobListingHeader />
       <JobListingJobs />
-      <MustCompleteJobPortal />
     </div>
   );
 };

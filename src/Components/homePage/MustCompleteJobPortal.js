@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 const MustCompleteJobPortal = () => {
   return (
     <section className="mustCompleteJobPortalSection">
@@ -10,7 +12,13 @@ const MustCompleteJobPortal = () => {
         </div>
         <div className="mustCompleteJobPortalButtons">
           <button className="mustCompleteJobPortalButton1">
-            Looking for a job?
+            <Link
+              to="/jobListings"
+              aria-label="Navigate to job listings page"
+              title="Job Listings"
+            >
+              Looking for a job?
+            </Link>
           </button>
           <button className="mustCompleteJobPortalButton2">Post a job</button>
         </div>

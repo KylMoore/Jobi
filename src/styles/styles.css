@@ -1275,6 +1275,10 @@ header p {
 .mustCompleteJobPortalSection .wrapper .mustCompleteJobPortalButtons .mustCompleteJobPortalButton1:hover, .mustCompleteJobPortalSection .wrapper .mustCompleteJobPortalButtons .mustCompleteJobPortalButton1:focus {
   background-color: #d2f34c;
 }
+.mustCompleteJobPortalSection .wrapper .mustCompleteJobPortalButtons .mustCompleteJobPortalButton1 a {
+  text-decoration: none;
+  color: #254135;
+}
 .mustCompleteJobPortalSection .wrapper .mustCompleteJobPortalButtons .mustCompleteJobPortalButton2 {
   width: 35%;
   font-size: 0.75rem;
@@ -2098,6 +2102,137 @@ footer .footerBottom ul li ul li svg {
 .pageOptionsModal ul li a:hover, .pageOptionsModal ul li a:focus {
   color: #254135;
   border: none;
+}
+
+.jobDescriptionHeaderSection {
+  background-color: #254135;
+  text-align: center;
+  padding: 3rem;
+}
+.jobDescriptionHeaderSection h1 {
+  margin: 0;
+  color: #f5f5f5;
+}
+.jobDescriptionHeaderSection p {
+  color: #f5f5f5;
+}
+
+.jobDescriptionInformationSection {
+  width: 65%;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationHeader {
+  padding: 3rem 0;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationHeader h3 {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationHeader p {
+  margin: 0;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationHeader p span {
+  font-weight: 600;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationHeader .jobDescriptionHeaderAnchors {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationHeader .jobDescriptionHeaderAnchors a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9f2ef;
+  margin: 0rem 1rem 0rem 0;
+  padding: 0.5rem 0.75rem;
+  color: #254135;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationHeader .jobDescriptionHeaderAnchors p {
+  padding: 0 0 0 1rem;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationHeader .jobDescriptionHeaderAnchors svg {
+  height: 1rem;
+  width: 1rem;
+  fill: #254135;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationOverview, .jobDescriptionInformationSection .jobDescriptionInformationJobDescription, .jobDescriptionInformationSection .jobDescriptionInformationResponsibilities, .jobDescriptionInformationSection .jobDescriptionInformationRequiredSkills, .jobDescriptionInformationSection .jobDescriptionInformationBenefits {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #0f1620;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationOverview div, .jobDescriptionInformationSection .jobDescriptionInformationJobDescription div, .jobDescriptionInformationSection .jobDescriptionInformationResponsibilities div, .jobDescriptionInformationSection .jobDescriptionInformationRequiredSkills div, .jobDescriptionInformationSection .jobDescriptionInformationBenefits div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationOverview div h3, .jobDescriptionInformationSection .jobDescriptionInformationJobDescription div h3, .jobDescriptionInformationSection .jobDescriptionInformationResponsibilities div h3, .jobDescriptionInformationSection .jobDescriptionInformationRequiredSkills div h3, .jobDescriptionInformationSection .jobDescriptionInformationBenefits div h3 {
+  margin: 0 1rem;
+  font-size: 1rem;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationOverview div p, .jobDescriptionInformationSection .jobDescriptionInformationJobDescription div p, .jobDescriptionInformationSection .jobDescriptionInformationResponsibilities div p, .jobDescriptionInformationSection .jobDescriptionInformationRequiredSkills div p, .jobDescriptionInformationSection .jobDescriptionInformationBenefits div p {
+  background-color: #31795a;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  border-radius: 5rem;
+  margin: 0;
+  color: #f5f5f5;
+  height: 1rem;
+  width: 1rem;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationOverview p, .jobDescriptionInformationSection .jobDescriptionInformationJobDescription p, .jobDescriptionInformationSection .jobDescriptionInformationResponsibilities p, .jobDescriptionInformationSection .jobDescriptionInformationRequiredSkills p, .jobDescriptionInformationSection .jobDescriptionInformationBenefits p {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+}
+.jobDescriptionInformationSection .jobDescriptionInformationJobDescription,
+.jobDescriptionInformationSection .jobDescriptionInformationResponsibilities,
+.jobDescriptionInformationSection .jobDescriptionInformationRequiredSkills {
+  margin: 1rem 0;
+}
+
+.relatedJobsSection {
+  padding: 3rem 0;
+  background-color: #e9f2ef;
+}
+.relatedJobsSection .relatedJobsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.relatedJobsSection .relatedJobsHeader h2 {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+.relatedJobsSection .relatedJobsListing {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 30%;
+  padding: 1.5rem;
+}
+.relatedJobsSection .relatedJobsListing img {
+  height: 1rem;
+}
+.relatedJobsSection .relatedJobsListing .relatedJobsListingInfo h3 {
+  background-color: #e9f2ef;
+  color: #31795a;
+  padding: 0.25rem 1rem;
+  font-size: 0.75rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.relatedJobsSection .relatedJobsListing .relatedJobsListingInfo h2 {
+  font-size: 1rem;
+}
+.relatedJobsSection .relatedJobsListing .relatedJobsListingInfo h2 a {
+  text-decoration: none;
 }
 
 @media (max-width: 1250px) {
